@@ -15,7 +15,7 @@ ap.add_argument("-r", "--result-path", required=True)
 args = vars(ap.parse_args())
 
 cd = ColorDescriptor((8, 12, 3))
-#cd = ColorDescriptor((24, 6, 6))
+
 query = cv2.imread(args["query"])
 features = cd.describe(query)
 
@@ -57,8 +57,7 @@ for (i, (score, resultID)) in enumerate(result):
 
         #cv2.imshow("Result", montage)
 
-    #for i in range(1, 10):
-        #i = i + 1
+  
     plt.subplot(3, 3, i + 1)
     RGB_result = cv2.cvtColor(result, cv2.COLOR_BGR2RGB)
     RGB_result_resized = cv2.resize(RGB_result, im_shape)
