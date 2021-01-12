@@ -2,5 +2,5 @@
 # Chuẩn bị: Cài đặt python3, PIP
 # Cài đặt python
 
-Mở command line để kiểm tra phiên bản python\\
+Mở command line để kiểm tra phiên bản python  
 python --version
