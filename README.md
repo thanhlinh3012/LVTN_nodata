@@ -50,11 +50,12 @@ Tạo thư mục **dataset** chứa toàn bộ tập ảnh dữ liệu ảnh Oxf
 Tạo thư mục **queries** chứa các ảnh cần truy vấn.
 
 ## Chạy dự án thực hiện các lệnh sau
+Sử dụng lệnh bên dưới để trích xuất các vector đặc trưng của ảnh dữ liệu và lưu chúng vào file *index.csv*:
 
  ```
  python index.py --dataset dataset --index index.csv
  ```
- 
+ Sử dụng lệnh bên dưới để thực hiện truy vấn ảnh:
   ```
   python search.py --index index.csv --query queries/q4.jpg --result-path dataset
  ```
