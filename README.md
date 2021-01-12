@@ -1,5 +1,5 @@
 # LVTN_TRUY VẤN ẢNH TRONG TẬP DỮ LIỆU ẢNH DỰA TRÊN ĐẶC TRƯNG RIÊNG
-# Chuẩn bị: Cài đặt python3, pip, OpenCV
+# Chuẩn bị: Cài đặt python3, pip, OpenCV; tải tập dữ liệu ảnh Oxford-5K
 ## Cài đặt python
 
 Mở command line để kiểm tra phiên bản python. Phiên bản đang sử dụng là Python 3.7.3  
@@ -35,3 +35,17 @@ Cài đặt OpenCV thông qua lệnh
  ```
   pip install imutils
  ```
+ ## Tải tập dữ liệu ảnh Oxford-5K
+ Tải tập dữ liệu ảnh Oxford-5K ở [Link](https://www.robots.ox.ac.uk/~vgg/data/oxbuildings/) này.
+ 
+ # Cài đặt project
+ ## Clone repository theo lệnh sau
+  ```
+  git clone https://github.com/thanhlinh3012/LVTN_nodata
+ ```
+## Tạo thư mục ảnh dữ liệu
+Tạo thư mục *dataset* chứa toàn bộ tập ảnh dữ liệu ảnh Oxford-5K vừa tải ở trên.
+
+## Tạo thư mục ảnh truy vấn
+
+## Chạy dự án thực hiện các lệnh sau
