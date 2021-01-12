@@ -44,7 +44,7 @@ Cài đặt OpenCV thông qua lệnh
   git clone https://github.com/thanhlinh3012/LVTN_nodata
  ```
 ## Tạo thư mục ảnh dữ liệu
-Tạo thư mục *dataset* chứa toàn bộ tập ảnh dữ liệu ảnh Oxford-5K vừa tải ở trên.
+Tạo thư mục **dataset** chứa toàn bộ tập ảnh dữ liệu ảnh Oxford-5K vừa tải ở trên.
 
 ## Tạo thư mục ảnh truy vấn
 
