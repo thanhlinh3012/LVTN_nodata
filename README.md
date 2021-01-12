@@ -10,6 +10,6 @@ Truy cập [Python.org](https://www.python.org/downloads/) để tải và cài 
 
 Kiểm tra việc cài đặt thành công Python bằng cách mở terminal và gõ lệnh sau
 
-  '''
+ ```
   python --version
-  '''
+ ```
