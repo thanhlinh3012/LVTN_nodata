@@ -1,4 +1,5 @@
-# LVTN_TRUY VẤN ẢNH TRONG TẬP DỮ LIỆU ẢNH DỰA TRÊN ĐẶC TRƯNG RIÊNG
+# TRUY VẤN ẢNH TRONG TẬP DỮ LIỆU ẢNH DỰA TRÊN ĐẶC TRƯNG RIÊNG
+Tìm kiếm các hình ảnh tương tự với ảnh đầu vào từ tập dữ liệu ảnh 
 # Chuẩn bị: Cài đặt python3, pip, OpenCV; tải tập dữ liệu ảnh Oxford-5K
 ## Cài đặt python
 
