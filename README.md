@@ -6,7 +6,7 @@ Mở command line để kiểm tra phiên bản python
 python --version  
 phiên bản đang sử dụng là Python 3.7.3  
 
-Truy cập ![Python.org](https://www.python.org/downloads/) để tải và cài đặt Python
+Truy cập [Python.org](https://www.python.org/downloads/) để tải và cài đặt Python
 
 Kiểm tra việc cài đặt thành công Python bằng cách mở terminal và gõ lệnh sau
 
