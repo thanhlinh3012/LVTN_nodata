@@ -47,5 +47,18 @@ Cài đặt OpenCV thông qua lệnh
 Tạo thư mục **dataset** chứa toàn bộ tập ảnh dữ liệu ảnh Oxford-5K vừa tải ở trên.
 
 ## Tạo thư mục ảnh truy vấn
+Tạo thư mục **queries** chứa các ảnh cần truy vấn.
 
 ## Chạy dự án thực hiện các lệnh sau
+
+ ```
+ python index.py --dataset dataset --index index.csv
+ ```
+ 
+  ```
+  python search.py --index index.csv --query queries/q4.jpg --result-path dataset
+ ```
+
+
+
+
