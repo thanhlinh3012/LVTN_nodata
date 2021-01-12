@@ -29,3 +29,9 @@ Cài đặt OpenCV thông qua lệnh
  ```
   pip install opencv-python
  ```
+ 
+ Kiểm tra phiên bản OpenCV thông qua gói imutils được cài đặt qua lệnh
+ 
+ ```
+  pip install imutils
+ ```
