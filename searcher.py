@@ -16,7 +16,7 @@ class Searcher:
 
             output = open("euclidean.csv", "w")
             for row in reader:
-                # parse out (phan tich cu phap) the img ID & features
+                # parse out the img ID & features
                 # the compute the eu distance
                 # between the features in our index & our query features
                 features = [float(x) for x in row[1:]]
@@ -33,9 +33,6 @@ class Searcher:
         return results[:limit]
 
     def eu_distance(self, histA, histB):
-        #d = 0.5 * np.sum([((a - b) ** 2) / (a + b + 1e-10)
-         #                for (a, b) in zip(histA, histB)])
-        # d = np.sum([(a - b) ** 2 for (a, b) in zip(histA, histB)])
         #d = distance.euclidean(histA, histB)
         d = sqrt(sum(pow(a-b, 2) for a, b in zip(histA, histB)))
         return d
