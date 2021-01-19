@@ -28,7 +28,9 @@ class Searcher:
         out_results = open("results_sorted.csv", "w")
         # sort the results, the smaller distances are at the front of the list
         results = sorted([(v, k) for (k, v) in results.items()])
-        out_results.write("%s\n" % (str(results)))
+        for x in results:
+            out_results.write("%s\n" % str(x))
+
         out_results.close()
         return results[:limit]
 
