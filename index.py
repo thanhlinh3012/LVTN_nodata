@@ -14,7 +14,7 @@ ap.add_argument("-i", "--index", required=True)
 args = vars(ap.parse_args())
 # initialize the color descriptor
 cd = ColorDescriptor((8, 12, 3))  # 8bins for Hue chanel, 12bins for saturation chanel, 3bins for value chanel
-
+# cd = ColorDescriptor((18, 3, 3))
 # open the output index file for writing
 output = open(args["index"], "w")
 for imagePath in glob.glob(args["dataset"] + "/*"):
@@ -31,5 +31,3 @@ for imagePath in glob.glob(args["dataset"] + "/*"):
 # close the index file
 output.close()
 print("%s seconds" % (time.time()-start_time))
-
-

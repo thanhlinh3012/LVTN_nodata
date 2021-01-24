@@ -1,9 +1,9 @@
 from colordescriptor import ColorDescriptor
 from searcher import Searcher
-from imutils import build_montages
 import argparse
 import cv2
 import time
+import os
 import matplotlib.pyplot as plt
 
 start_time = time.time()
@@ -15,10 +15,10 @@ ap.add_argument("-r", "--result-path", required=True)
 args = vars(ap.parse_args())
 
 cd = ColorDescriptor((8, 12, 3))
-
+# cd = ColorDescriptor((18, 3, 3))
 query = cv2.imread(args["query"])
 features = cd.describe(query)
-
+print(features)
 
 searcher = Searcher(args["index"])
 result = searcher.search(features)
@@ -35,10 +35,8 @@ plt.axis("off")
 results = []
 
 plt.figure("Results", figsize=(3 * 3.13, 2 * 3.13))
-#fig.add_subplot(3, 3, 1)
 plt.subplots_adjust(left=0.065, right=0.925, bottom=0.025, top=0.95, hspace=0.135, wspace=0.25)
 for (i, (score, resultID)) in enumerate(result):
-    #result = cv2.imread(args["result_path"] + "/" + resultID)
     result = cv2.imread((args["result_path"] + resultID.replace('dataset', '')).replace('\\', '/'))
     results.append(result)
     """plt.subplot(1, len(results), i + 1)
@@ -46,35 +44,27 @@ for (i, (score, resultID)) in enumerate(result):
     plt.imshow(result)
     plt.axis("off")"""
 
-    #cv2.imshow("result", result)
-    #print(resultID)
-    #print("%s seconds" % (time.time() - start_time))
-    #cv2.waitKey(1000)
-    #im_shape = (300, 300)
-    #montage_shape = (3, 3)
-    #montages = build_montages(results, im_shape, montage_shape)
-    #for montage in montages:
+    '''print(resultID)
+    print("%s seconds" % (time.time() - start_time))
+    cv2.waitKey(1000)
+    im_shape = (300, 300)
+    montage_shape = (3, 3)
+    montages = build_montages(results, im_shape, montage_shape)
+    for montage in montages:
+        cv2.imshow("Result", montage)'''
 
-        #cv2.imshow("Result", montage)
-
-  
     plt.subplot(3, 3, i + 1)
     RGB_result = cv2.cvtColor(result, cv2.COLOR_BGR2RGB)
-    RGB_result_resized = cv2.resize(RGB_result, im_shape)
-    plt.imshow(RGB_result_resized)
+    #RGB_result_resized = cv2.resize(RGB_result, im_shape)
+    plt.imshow(RGB_result)
+    #plt.imshow(result)
     plt.title("{}: {:.2f}".format(resultID, score), fontdict={'fontsize': 6})
-
-    #plt.show()
-
     plt.axis("off")
 
     print(resultID)
-    print(score)
-    print("%s seconds" % (time.time() - start_time))
-        #cv2.waitKey(1000)
-plt.show()
+    print("Euclidean: ", score)
+    print("Time: %s s" % (time.time() - start_time))
 
-#print("%s seconds" % (time.time()-start_time))
-#cv2.waitKey(20000)
+plt.show()
 cv2.destroyAllWindows()
 

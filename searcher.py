@@ -1,6 +1,4 @@
-import numpy as np
 import csv
-from scipy.spatial import distance
 from math import *
 
 class Searcher:
